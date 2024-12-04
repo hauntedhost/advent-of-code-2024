@@ -20,7 +20,7 @@ pub fn part_one(input: &str) -> Option<u32> {
         let mut safe = 1;
         let mut prev_part: Option<u32> = None;
         let mut trend: Option<Trend> = None;
-        'parts: for part in parse_u32_parts(line) {
+        'parts: for part in line_into_u32_iter(line) {
             if let Some(prev_part) = prev_part {
                 match (diff(part, prev_part), &trend) {
                     (Diff::Safe(diff_trend), Some(curr_trend)) if diff_trend == *curr_trend => (),
@@ -41,7 +41,7 @@ pub fn part_one(input: &str) -> Option<u32> {
 pub fn part_two(input: &str) -> Option<u32> {
     let mut safe_count = 0;
     for line in input.lines() {
-        let parts = parse_u32_parts(line).collect::<Vec<u32>>();
+        let parts = line_into_u32_iter(line).collect::<Vec<u32>>();
         if is_safe_with_dampener(parts) {
             safe_count += 1;
         }
