@@ -30,16 +30,19 @@ Solutions for [Advent of Code](https://adventofcode.com/) in [Rust](https://www.
 
 ## Usage
 
+### Common
+
 ```sh
-# Common
 cargo today # Scaffold, download input and read puzzle of the day!
 cargo scaffold [day] --download # Scaffold and download input for specified day
 cargo solve [day] # Solve for specified day
 cargo solve [day] --submit [part] # Solve for day and submit/check solution
 cargo test --bin [day] # Run tests for specified day
 cargo time --all --store # Benchmark all solutions and update readme
+```
 
-# All
+### All Commands
+```sh
 cargo all # Solve for all days
 cargo clippy # Lint code
 cargo download [day] # Download input for day
@@ -61,3 +64,6 @@ cargo today # Scaffold, download input and read puzzle of the day!
 - [itertools](https://crates.io/crates/itertools): Extends iterators with extra methods and adaptors. Frequently useful for aoc puzzles.
 - [regex](https://crates.io/crates/regex): Official regular expressions implementation for Rust.
 - [blessred.rs](https://blessed.rs/crates): A curated list of popular crates
+
+---
+👻 [haunted.host](https://www.haunted.host)
